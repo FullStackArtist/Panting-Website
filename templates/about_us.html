@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+
+img {
+    float: left;
+    width:  300px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#GFG {
+            text-decoration: none;
+        }
+.p {
+        font-family:lavender;
+font-size:15px
+	}
+body
+{
+background-color:E6E6FA;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 150px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 8px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 100px;
+  padding: 5px;
+}
+#mySidenav a {
+  position: absolute;
+  right: 40px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 190px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  right: 0;
+}
+
+#follow_us 
+{
+  top: 5px;
+  background-color: #dce9f1;
+}
+
+#about {
+  top: 80px;
+  background-color: #dce9f1;
+}
+
+#blog {
+  top: 140px;
+  background-color: #dce9f1;
+}
+
+#projects {
+  top: 200px;
+  background-color: #dce9f1;
+}
+
+#contact {
+  top: 260px; 
+  background-color: #dce9f1;
+}
+
+h1{
+   transition: all 0.5s ease-out;
+}
+
+h1:hover{
+   background-position: right;
+
+}
+
+img {
+    float: left;
+    width:  250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.p {
+        font-family:lavender;
+	}
+body
+{
+background-color:#dce9f1;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 60%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+#mySidenav a {
+  position: absolute;
+  right: 40px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 190px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  right: 0;
+}
+
+#follow_us 
+{
+  top: 5px;
+  background-color: #dce9f1;
+}
+
+#about {
+  top: 80px;
+  background-color: #dce9f1;
+}
+
+#blog {
+  top: 140px;
+  background-color: #dce9f1;
+}
+
+#projects {
+  top: 200px;
+  background-color: #dce9f1;
+}
+
+#contact {
+  top: 260px; 
+  background-color: #dce9f1;
+}
+		</style>
+	
+	  </head>
+  <body >{% include 'main.html' %}
+
+<div >
+{% block container %}
+{% endblock %}
+
+<br><br>
+</div>
+<br><br>
+</div>
+	 <div class="card">
+			<div class="row">
+  			<div class="column">
+  				 
+				 
+			 <img src="{{ url_for('static',filename='image8.jfif') }}"/>	  <br><br>
+                         <p style="font-family:Brush Script Std;background-image: linear-gradient(to left, black,gold);
+	        -webkit-background-clip: text;
+     	   -moz-background-clip: text;
+     	   background-clip: text; 
+     				   color: transparent;font-size:25px;">&nbsp;Leonardo da Vinci</p>
+
+   
+				</div>
+		 	  <div class="column" style="float:left">
+	      <p style="font-family:Brush Script Std;background-image: linear-gradient(to left, black,gold);
+	        -webkit-background-clip: text;
+     	   -moz-background-clip: text;
+     	   background-clip: text; float:left;width:490px;
+     				   color: transparent;font-size:17px;">&nbsp; Leonardo da Vinci, (Italian: “Leonardo from Vinci”) (born April 15, 1452, Anchiano, near Vinci, Republic of Florence [Italy]—died May 2, 1519, Cloux [now Clos-Lucé], France), Italian painter, draftsman, sculptor, architect, and engineer whose skill and intelligence, perhaps more than that of any other figure, epitomized the Renaissance humanist ideal. His Last Supper (1495–98) and Mona Lisa (c. 1503–19) are among the most widely popular and influential paintings of the Renaissance. His notebooks reveal a spirit of scientific inquiry and a mechanical inventiveness that were centuries ahead of their time.
+				</div>
+  		 </div>
+		<div class="row">
+  			<div class="column">
+  				 
+				 
+			 <img src="{{ url_for('static',filename='image4.jpg') }}"/>	  <br><br>
+                         <p style="font-family:Brush Script Std;background-image: linear-gradient(to left, black,gold);
+	        -webkit-background-clip: text;
+     	   -moz-background-clip: text;
+     	   background-clip: text; 
+     				   color: transparent;font-size:25px;">&nbsp;Pablo Picasso</p>
+
+   
+				</div>
+		 	  <div class="column" style="float:left">
+	      <p style="font-family:Brush Script Std;background-image: linear-gradient(to left, black,gold);
+	        -webkit-background-clip: text;
+     	   -moz-background-clip: text;
+     	   background-clip: text; float:left;width:490px;
+     				   color: transparent;font-size:17px;">&nbsp;Pablo Picasso, in full Pablo Diego José Francisco de Paula Juan Nepomuceno Crispín Crispiniano María Remedios de la Santísima Trinidad Ruiz Picasso, also called (before 1901) Pablo Ruiz or Pablo Ruiz Picasso, (born October 25, 1881, Málaga, Spain—died April 8, 1973, Mougins, France), Spanish expatriate painter, sculptor, printmaker, ceramicist, and stage designer, one of the greatest and most-influential artists of the 20th century and the creator (with Georges Braque) of Cubism. (For more information on Picasso’s name see Researcher’s Note: Picasso’s full name.)</p></a>
+				 
+				</div>
+  		 </div>
+
+
+<div class="row">
+  			<div class="column">
+  				 
+				 
+			 <img src="{{ url_for('static',filename='image5.jpg') }}"/>	  <br><br>
+                         <p style="font-family:Brush Script Std;background-image: linear-gradient(to left, black,gold);
+	        -webkit-background-clip: text;
+     	   -moz-background-clip: text;
+     	   background-clip: text; 
+     				   color: transparent;font-size:25px;">&nbsp;Vincent van Gogh</p>
+
+   
+				</div>
+		 	  <div class="column" style="float:left">
+	      <p style="font-family:Brush Script Std;background-image: linear-gradient(to left, black,gold);
+	        -webkit-background-clip: text;
+     	   -moz-background-clip: text;
+     	   background-clip: text; float:left;width:490px;
+     				   color: transparent;font-size:17px;">&nbsp;Vincent van Gogh, in full Vincent Willem van Gogh, (born March 30, 1853, Zundert, Netherlands—died July 29, 1890, Auvers-sur-Oise, near Paris, France), Dutch painter, generally considered the greatest after Rembrandt van Rijn, and one of the greatest of the Post-Impressionists. The striking colour, emphatic brushwork, and contoured forms of his work powerfully influenced the current of Expressionism in modern art. Van Gogh’s art became astoundingly popular after his death, especially in the late 20th century, when his work sold for record-breaking sums at auctions around the world and was featured in blockbuster touring exhibitions. In part because of his extensive published letters, van Gogh has also been mythologized in the popular imagination as the quintessential tortured artist.
+				</div>
+  		 </div>
+
+<div class="row">
+  			<div class="column">
+  				 
+				 
+			 <img src="{{ url_for('static',filename='image7.jpg') }}"/>	  <br><br>
+                         <p style="font-family:Brush Script Std;background-image: linear-gradient(to left, black,gold);
+	        -webkit-background-clip: text;
+     	   -moz-background-clip: text;
+     	   background-clip: text; 
+     				   color: transparent;font-size:25px;">&nbsp;M.F. Husain</p>
+
+   
+				</div>
+		 	  <div class="column" style="float:left">
+	      <p style="font-family:Brush Script Std;background-image: linear-gradient(to left, black,gold);
+	        -webkit-background-clip: text;
+     	   -moz-background-clip: text;
+     	   background-clip: text; float:left;width:490px;
+     				   color: transparent;font-size:17px;">&nbsp;M.F. Husain, in full Maqbool Fida Husain, Husain also spelled Hussain, (born September 17, 1915, Pandharpur, Maharashtra state, India—died June 9, 2011, London, England), Indian artist known for executing bold, vibrantly coloured narrative paintings in a modified Cubist style. He was one of the most celebrated and internationally recognized Indian artists of the 20th century.
+
+In 1935 Husain moved to Mumbai (Bombay), where he designed and painted graphic billboard advertisements for Bollywood movies. After his first serious work was exhibited (1947) by the Bombay Art Society, he was invited to join five other painters in founding the Progressive Artists Group. Husain, who became known as the “Picasso of India,” created works that could be caustic and funny as well as serious and sombre. His themes—usually treated in series—included topics as diverse as Mohandas K. Gandhi, Mother Teresa, the Ramayana, the Mahabharata, the British raj, and motifs of Indian urban and rural life.
+
+
+				</div>
+  		 </div>
+
+
+<div class="row">
+  			<div class="column">
+  				 
+				 
+			 <img src="{{ url_for('static',filename='image6.jpg') }}"/>	  <br><br>
+                         <p style="font-family:Brush Script Std;background-image: linear-gradient(to left, black,gold);
+	        -webkit-background-clip: text;
+     	   -moz-background-clip: text;
+     	   background-clip: text; 
+     				   color: transparent;font-size:25px;">&nbsp;Salvador Dalí</p>
+
+   
+				</div>
+		 	  <div class="column" style="float:left">
+	      <p style="font-family:Brush Script Std;background-image: linear-gradient(to left, black,gold);
+	        -webkit-background-clip: text;
+     	   -moz-background-clip: text;
+     	   background-clip: text; float:left;width:490px;
+     				   color: transparent;font-size:17px;">&nbsp; Salvador Dalí, in full Salvador Felipe Jacinto Dalí y Domenech, (born May 11, 1904, Figueras, Spain—died January 23, 1989, Figueras), Spanish Surrealist painter and printmaker, influential for his explorations of subconscious imagery.
+
+As an art student in Madrid and Barcelona, Dalí assimilated a vast number of artistic styles and displayed unusual technical facility as a painter. It was not until the late 1920s, however, that two events brought about the development of his mature artistic style: his discovery of Sigmund Freud’s writings on the erotic significance of subconscious imagery and his affiliation with the Paris Surrealists, a group of artists and writers who sought to establish the “greater reality” of the human subconscious over reason. To bring up images from his subconscious mind, Dalí began to induce hallucinatory states in himself by a process he described as “paranoiac critical.”
+
+				</div>
+  		 </div>
+
+
+</div>
+  			 
+ 
+  </body>
+</html>
+ 

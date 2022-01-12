@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+
+img {
+    float: left;
+    width:  300px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#GFG {
+            text-decoration: none;
+        }
+.p {
+        font-family:lavender;
+	}
+body
+{
+background-color:E6E6FA;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 8px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+#mySidenav a {
+  position: absolute;
+  right: 40px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 190px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  right: 0;
+}
+
+#follow_us 
+{
+  top: 5px;
+  background-color: #dce9f1;
+}
+
+#about {
+  top: 80px;
+  background-color: #dce9f1;
+}
+
+#blog {
+  top: 140px;
+  background-color: #dce9f1;
+}
+
+#projects {
+  top: 200px;
+  background-color: #dce9f1;
+}
+
+#contact {
+  top: 260px; 
+  background-color: #dce9f1;
+}
+		</style>
+	
+	  </head>
+  <body >
+    {% include 'main.html' %}
+
+<div >
+{% block container %}
+{% endblock %}
+
+<br><br>
+</div>
+	 <div class="card">
+		<div class="row">
+  			<div class="column">
+  				 
+				 
+			<a id="GFG" href="{{ url_for('art_work') }}"> <img src="{{ url_for('static',filename='image1.jpg') }}"/>	  
+      <p style="font-family:Brush Script Std;background-image: linear-gradient(to left, black,gold);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;font-size:50px;">&nbsp; Art work</p></a>
+
+   
+				</div>
+  		 
+  			<div class="column"> 
+ 				<a id="GFG" href="{{ url_for('request_art_work') }}"> <img src="{{ url_for('static',filename='image2.jpg') }}"/>
+      <p style="font-family:Brush Script Std;background-image: linear-gradient(to left, black,gold);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;font-size:50px;">Request an art work</p></a>
+   
+				</div>
+ 		 
+  			 <div class="column">
+ 				  
+ 			<a id="GFG" href="{{ url_for('about_us') }}"><img src="{{ url_for('static',filename='image3.jpg') }}"/>
+      <p style="font-family:Brush Script Std;background-image: linear-gradient(to left, black,gold);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;font-size:50px;">About us</p></a>
+  
+  </div>
+</div>
+ 
+		  
+</div>
+	</div>
+  </body>
+</html>
+
+ 

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="Style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+ 
+.container{
+  max-width: 900px;
+  width: 900px;
+  background: linear-gradient(to right,#e6f0f4,#8bdff7);
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 20;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient( );
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-size: 22px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 22px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ 
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+  font-size:22px;
+}
+  
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 120%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 22px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  }
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+} 
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category{
+    width: 100%;
+  }
+  .content form .user-details{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .category{
+    flex-direction: column;
+  }
+}
+
+ 
+#mySidenav a {
+  position: absolute;
+  right: 40px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 190px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  right: 0;
+}
+
+#follow_us 
+{
+  top: 5px;
+  background-color: #dce9f1;
+}
+
+#about {
+  top: 80px;
+  background-color: #dce9f1;
+}
+
+#blog {
+  top: 140px;
+  background-color: #dce9f1;
+}
+
+#projects {
+  top: 200px;
+  background-color: #dce9f1;
+}
+
+#contact {
+  top: 260px; 
+  background-color: #dce9f1;
+}
+#drop-zone {
+  max-width: 200px;
+  height: 200px;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+   
+  font-weight: 500;
+  font-size: 30px;
+  cursor: pointer;
+  color: #cccccc;
+  border: 4px dashed #009578;
+  border-radius: 10px;
+}
+
+#drop-zone--over {
+  border-style: solid;
+}
+
+#drop-zone__input {
+  display: none;
+}
+
+#drop-zone__thumb {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #cccccc;
+  background-size: cover;
+  position: relative;
+}
+
+#drop-zone__thumb:after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.75);
+  font-size: 14px;
+  text-align: center;
+}
+		</style>
+	
+	  </head>
+<script>
+document.querySelectorAll(".drop-zone__input").forEach((inputElement) => {
+  const dropZoneElement = inputElement.closest(".drop-zone");
+
+  dropZoneElement.addEventListener("click", (e) => {
+    inputElement.click();
+  });
+
+  inputElement.addEventListener("change", (e) => {
+    if (inputElement.files.length) {
+      updateThumbnail(dropZoneElement, inputElement.files[0]);
+    }
+  });
+
+  dropZoneElement.addEventListener("dragover", (e) => {
+    e.preventDefault();
+    dropZoneElement.classList.add("drop-zone--over");
+  });
+
+  ["dragleave", "dragend"].forEach((type) => {
+    dropZoneElement.addEventListener(type, (e) => {
+      dropZoneElement.classList.remove("drop-zone--over");
+    });
+  });
+
+  dropZoneElement.addEventListener("drop", (e) => {
+    e.preventDefault();
+
+    if (e.dataTransfer.files.length) {
+      inputElement.files = e.dataTransfer.files;
+      updateThumbnail(dropZoneElement, e.dataTransfer.files[0]);
+    }
+
+    dropZoneElement.classList.remove("drop-zone--over");
+  });
+});
+
+/**
+ * Updates the thumbnail on a drop zone element.
+ *
+ * @param {HTMLElement} dropZoneElement
+ * @param {File} file
+ */
+function updateThumbnail(dropZoneElement, file) {
+  let thumbnailElement = dropZoneElement.querySelector(".drop-zone__thumb");
+
+  // First time - remove the prompt
+  if (dropZoneElement.querySelector(".drop-zone__prompt")) {
+    dropZoneElement.querySelector(".drop-zone__prompt").remove();
+  }
+
+  // First time - there is no thumbnail element, so lets create it
+  if (!thumbnailElement) {
+    thumbnailElement = document.createElement("div");
+    thumbnailElement.classList.add("drop-zone__thumb");
+    dropZoneElement.appendChild(thumbnailElement);
+  }
+
+  thumbnailElement.dataset.label = file.name;
+
+  // Show thumbnail for image files
+  if (file.type.startsWith("image/")) {
+    const reader = new FileReader();
+
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
+    };
+  } else {
+    thumbnailElement.style.backgroundImage = null;
+  }
+}
+
+</script>
+  <body >
+    {% include 'main.html' %}
+
+<div >
+{% block container %}
+{% endblock %}
+</div>
+
+  <div class="container">
+ 
+	
+{% if error_statment %}	
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="font-family:Brush Script Std">
+  {{ error_statement }} 
+
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+{% endif %}
+    <div class="title" style="font-family:Brush Script Std" >&nbsp; Please fill the form </div>
+    <div class="content">
+      <form action="/form" method="POST" enctype='multipart/form-data'>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details" style="font-family:Brush Script Std">Full name </span>
+            <input style="font-family:Brush Script Std" name="full_name" type="text" placeholder="Full name" value="full_name">
+          </div>
+          <div class="input-box">
+            <span style="font-family:Brush Script Std" class="details">Address</span>
+            <input style="font-family:Brush Script Std" name="address" type="text" placeholder="Address" value="address">
+          </div>
+		
+          <div class="input-box">
+            <span style="font-family:Brush Script Std" class="details">Email</span>
+            <input style="font-family:Brush Script Std" name="email" type="text" placeholder="Enter your email" value="email">
+          </div>
+          <div class="input-box">
+            <span style="font-family:Brush Script Std" class="details">Phone Number</span>
+            <input style="font-family:Brush Script Std" name="phone_number" type="text" placeholder="Enter your number" value="phone_number">
+          </div>
+
+          
+	<div class="input-box">
+            <span style="font-family:Brush Script Std;" class="details">Painting description</span>
+            <input style="font-family:Brush Script Std;height:130px;" name="descrption" type="text" placeholder="Painting description" value="decrption">
+          </div>
+      	  <div class="drop-zone" >
+        <span class="drop-zone__prompt" style="font-family:Brush Script Std;font-size:30px"  > &nbsp;Upload image</span><br>
+    <input style="font-family:Brush Script Std" type="file" name="myfile" class="drop-zone__input">
+  </div>
+        <div class="button">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+	
+ 
+
+ </body>
+</html>
+
+ 

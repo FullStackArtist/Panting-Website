@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+
+h1{
+   transition: all 0.5s ease-out;
+}
+
+h1:hover{
+   background-position: right;
+
+}
+
+img {
+    float: left;
+    width:  250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.p {
+        font-family:lavender;
+	}
+body
+{
+background-color:#dce9f1;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 60%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+#mySidenav a {
+  position: absolute;
+  right: 40px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 190px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+
+#mySidenav a:hover {
+  right: 0;
+}
+
+#follow_us 
+{
+  top: 5px;
+  background-color: #dce9f1;
+}
+
+#about {
+  top: 80px;
+  background-color: #dce9f1;
+}
+
+#blog {
+  top: 140px;
+  background-color: #dce9f1;
+}
+
+#projects {
+  top: 200px;
+  background-color: #dce9f1;
+}
+
+#contact {
+  top: 260px; 
+  background-color: #dce9f1;
+}
+		</style>
+	
+	  </head>
+  <body >
+ 
+ 
+      
+<h1>
+      <p style="font-family:Brush Script Std, cursive;h;background-image: linear-gradient(to left, black,gold);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;font-size:50px;">&nbsp; Full Stack Artist as Pankaj Verma</p>
+    </h1>
+ 
+      <form action="/searchdb" method="POST" class="d-flex">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input name="search" style="font-family:Brush Script Std;background-image: linear-gradient(to right, black,gold);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text; 
+        color: transparent;font-size:30px;" class="form-control me-2" type="search" placeholder="Search for Artist " aria-label="Search">
+        <button style="font-family:Brush Script Std;background-image: linear-gradient(to left, black,gold);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;font-size:30px;" class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    
+
+ <div id="mySidenav" class="sidenav">
+   <a href="#" id="follow_us"><p style="font-family:Brush Script Std;background-image: linear-gradient(to right,black,gold);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;font-size:25px;">Follow us @</p>
+  <a href="{{ url_for('Youtube') }}" id="about">
+      <p style="font-family:Brush Script Std;background-image: linear-gradient(to right, red,yellow);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;font-size:25px;">Youtube</p>
+     </a>
+  <a href="{{ url_for('Instagram') }}" id="blog"><p style="font-family:Brush Script Std;background-image: linear-gradient(to right, #8a0433, yellow, red);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;font-size:25px;">Instagram</p></a>
+  <a href="{{ url_for('Pintrest') }}" id="projects"><p style="font-family:Brush Script Std;background-image: linear-gradient(to right, red,orange,white );
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;font-size:25px;">Pintrest</p></a>
+ 
+  <a href="{{ url_for('facebook') }}" id="contact"><p style="font-family:Brush Script Std;background-image: linear-gradient(to right, blue ,white);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;font-size:25px;">Facebook</p></a> 
+</div>
+</div>
+	</div>
+  </body>
+</html>

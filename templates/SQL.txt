@@ -1,0 +1,16 @@
+create table Login
+(email varchar2(100),password varchar2(50),status varchar2(20))
+
+create table signup
+(full_name varchar2(100),email varchar2(100),password varchar2(50),phone_number number(10),status varchar2(10))
+
+insert into Login (email,password,status) values('pankajartverma0@gmail.com','123456789','admin')
+
+
+
+create task insertval
+    warehouse =COMPUTE_WH
+    SCHEDULE = 'USING CRON 0 9-17 * * SUN America/Los_Angeles'
+  TIMESTAMP_INPUT_FORMAT = 'YYYY-MM-DD HH24'
+AS
+INSERT INTO Login select email,password,status from signup
