@@ -25,7 +25,7 @@ def userdetails():
     va="userdetails"
     conn = snowflake.connector.connect(
                 user = 'Epsilon',
-                password = "notApainting01",
+                password = "",
                 account="bp14989.canada-central.azure",
                 warehouse="COMPUTE_WH",
                 role='SYSADMIN',
@@ -50,7 +50,7 @@ def requestwork():
     va="requestwork"
     conn = snowflake.connector.connect(
                 user = 'Epsilon',
-                password = "notApainting01",
+                password = "",
                 account="bp14989.canada-central.azure",
                 warehouse="COMPUTE_WH",
                 role='SYSADMIN',
@@ -87,7 +87,7 @@ def signup():
     #msg=es.sent(full_name,address,email,descrption,phone_number)
     conn = snowflake.connector.connect(
                 user = 'Epsilon',
-                password = "notApainting01",
+                password = "",
                 account="bp14989.canada-central.azure",
                 warehouse="COMPUTE_WH",
                 role='SYSADMIN',
@@ -112,7 +112,7 @@ def login():
     pas=request.form.get("password")
     conn = snowflake.connector.connect(
                 user = 'Epsilon',
-                password = "notApainting01",
+                password = "",
                 account="bp14989.canada-central.azure",
                 warehouse="COMPUTE_WH",
                 role='SYSADMIN',
@@ -172,7 +172,7 @@ def searchdb():
     print(val)
     conn = snowflake.connector.connect(
                 user = 'Epsilon',
-                password = "notApainting01",
+                password = "",
                 account="bp14989.canada-central.azure",
                 warehouse="COMPUTE_WH",
                 role='SYSADMIN',
@@ -216,7 +216,7 @@ def form():
     #msg=es.sent(full_name,address,email,descrption,phone_number)
     conn = snowflake.connector.connect(
                 user = 'Epsilon',
-                password = "notApainting01",
+                password = "",
                 account="bp14989.canada-central.azure",
                 warehouse="COMPUTE_WH",
                 role='SYSADMIN',
